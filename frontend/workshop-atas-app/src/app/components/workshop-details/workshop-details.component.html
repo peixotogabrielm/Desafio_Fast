@@ -1,0 +1,74 @@
+<div class="workshop-details-container">
+  <div class="header-actions">
+    <button (click)="voltarParaLista()" class="btn btn-back">
+      ← Voltar para Lista
+    </button>
+  </div>
+
+  <div *ngIf="ata$ | async as ata; else notFound">
+    <div class="workshop-header">
+      <h1>{{ata.workshop.nome}}</h1>
+      <div class="workshop-meta">
+        <span class="data">{{formatarData(ata.workshop.dataRealizacao)}}</span>
+        <span class="total-participantes">{{ata.colaboradores.length}} participante(s)</span>
+      </div>
+    </div>
+
+    <div class="workshop-content">
+      <section class="descricao-section">
+        <h2>Descrição</h2>
+        <p class="descricao">{{ata.workshop.descricao}}</p>
+      </section>
+
+      <section class="colaboradores-section">
+        <h2>Colaboradores Presentes</h2>
+        <div class="colaboradores-grid">
+          <div
+            *ngFor="let colaborador of ata.colaboradores; let i = index"
+            class="colaborador-card"
+          >
+            <div class="colaborador-avatar">
+              {{colaborador.nome.charAt(0).toUpperCase()}}
+            </div>
+            <div class="colaborador-info">
+              <h3>{{colaborador.nome}}</h3>
+              <span class="colaborador-id">ID: {{colaborador.id}}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resumo-section">
+        <h2>Resumo da Ata</h2>
+        <div class="resumo-info">
+          <div class="info-item">
+            <label>ID da Ata:</label>
+            <span>{{ata.id}}</span>
+          </div>
+          <div class="info-item">
+            <label>Workshop ID:</label>
+            <span>{{ata.workshop.id}}</span>
+          </div>
+          <div class="info-item">
+            <label>Data de Realização:</label>
+            <span>{{formatarData(ata.workshop.dataRealizacao)}}</span>
+          </div>
+          <div class="info-item">
+            <label>Total de Participantes:</label>
+            <span>{{ata.colaboradores.length}}</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <ng-template #notFound>
+    <div class="not-found">
+      <h2>Workshop não encontrado</h2>
+      <p>Não foi possível encontrar detalhes para este workshop.</p>
+      <button (click)="voltarParaLista()" class="btn btn-primary">
+        Voltar para Lista
+      </button>
+    </div>
+  </ng-template>
+</div>
