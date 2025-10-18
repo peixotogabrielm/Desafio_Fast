@@ -17,7 +17,7 @@ A API usa JWT Bearer Token. Todos os endpoints (exceto registro e login) requere
 # Frontend
 
 
-## ✅ O que foi implementado:
+## O que foi implementado:
 
 ### 1. **Modelos de Dados** (seguindo sua especificação)
 - `Colaborador`: { id: number, nome: string }
