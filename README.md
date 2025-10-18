@@ -3,6 +3,16 @@
 # Backend
 API para gerenciamento de workshops, colaboradores e atas de presença.
 
+## Tecnologias Utilizadas
+
+- **.NET 8** - Framework principal
+- **ASP.NET Core Web API** - Para criação da API REST
+- **Entity Framework Core** - ORM para acesso a dados
+- **SQL Server** - Banco de dados
+- **JWT (JSON Web Tokens)** - Autenticação e autorização
+- **Swagger/OpenAPI** - Documentação da API
+
+
 ## Como executar
 
 1. Clone o repositório
@@ -13,6 +23,25 @@ API para gerenciamento de workshops, colaboradores e atas de presença.
 ## Autenticação
 
 A API usa JWT Bearer Token. Todos os endpoints (exceto registro e login) requerem autenticação.
+
+## Endpoints e Fluxo
+
+Auth
+- POST /api/auth/login → AuthController.Login
+
+Atas
+- POST /api/atas → AtasController.CreateAta → AtaService.CreateAtaAsync
+- PUT /api/atas/{ataId}/colaboradores/{colaboradorId} → AtasController.AddColaborador → AtaService.AddColaboradorAsync
+- DELETE /api/atas/{ataId}/colaboradores/{colaboradorId} → AtasController.RemoveColaborador → AtaService.RemoveColaboradorAsync
+- GET /api/atas → AtasController.GetAtas → AtaService.GetAtasAsync
+
+Colaboradores
+- POST /api/colaboradores → ColaboradoresController.CreateColaborador → ColaboradorService.CreateColaboradorAsync
+- GET /api/colaboradores → ColaboradoresController.GetColaboradores → ColaboradorService.GetColaboradoresAsync
+
+Workshops
+- POST /api/workshops → WorkshopsController.CreateWorkshop → WorkshopService.CreateWorkshopAsync
+- GET /api/workshops/{id} → WorkshopsController.GetWorkshop → WorkshopService.GetWorkshopAsync
 
 # Frontend
 
