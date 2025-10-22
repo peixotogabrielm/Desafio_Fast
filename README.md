@@ -77,9 +77,7 @@ Workshops
 - npm (vem com Node)
 - Angular CLI 15.x (opcional instalar globalmente)
 
-<<<<<<< Updated upstream
 ## O que foi implementado:
-=======
 Verifique versão Node:
 ```bash
 node -v
