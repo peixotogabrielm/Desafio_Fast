@@ -2,7 +2,6 @@
 
 ## Backend
 
-<<<<<<< Updated upstream
 ## Tecnologias Utilizadas
 
 - **.NET 8** - Framework principal
@@ -19,9 +18,8 @@
 2. Navegue até a pasta do projeto: `cd Desafio_Fast\Desafio_Fast`
 3. Execute: `dotnet run`
 4. Acesse o Swagger: `https://localhost:7XXX/swagger`
-=======
+
 API REST para gerenciamento de Workshops, Atas e Colaboradores.
->>>>>>> Stashed changes
 
 ## Autenticação
 JWT via endpoint de login. Enviar `Authorization: Bearer <token>` nos endpoints protegidos.
