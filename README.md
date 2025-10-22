@@ -1,8 +1,8 @@
-# Desafio Fast API
+# Desafio Fast
 
-# Backend
-API para gerenciamento de workshops, colaboradores e atas de presença.
+## Backend
 
+<<<<<<< Updated upstream
 ## Tecnologias Utilizadas
 
 - **.NET 8** - Framework principal
@@ -19,10 +19,39 @@ API para gerenciamento de workshops, colaboradores e atas de presença.
 2. Navegue até a pasta do projeto: `cd Desafio_Fast\Desafio_Fast`
 3. Execute: `dotnet run`
 4. Acesse o Swagger: `https://localhost:7XXX/swagger`
+=======
+API REST para gerenciamento de Workshops, Atas e Colaboradores.
+>>>>>>> Stashed changes
 
 ## Autenticação
+JWT via endpoint de login. Enviar `Authorization: Bearer <token>` nos endpoints protegidos.
 
-A API usa JWT Bearer Token. Todos os endpoints (exceto registro e login) requerem autenticação.
+### Login
+POST `api/auth/login`  
+Body: `{ "username": "<admin>", "password": "<senha>" }`  
+Resposta: `{ token, expiresAt }`
+
+## Endpoints
+
+### Atas (`api/atas`)
+- POST `api/atas` cria ata
+- PUT `api/atas/{ataId}/colaboradores/{colaboradorId}` adiciona colaborador à ata
+- DELETE `api/atas/{ataId}/colaboradores/{colaboradorId}` remove colaborador da ata
+- GET `api/atas?workshopNome={nome}&data={yyyy-MM-dd}` lista atas (filtros opcionais)
+
+### Colaboradores (`api/colaboradores`)
+- POST `api/colaboradores` cria colaborador
+- GET `api/colaboradores` lista colaboradores
+
+### Workshops (`api/workshops`)
+- POST `api/workshops` cria workshop
+- GET `api/workshops/{id}` obtém workshop
+
+## Códigos de Resposta Principais
+201 Created, 200 OK, 204 No Content, 401 Unauthorized, 404 Not Found
+
+## Observações
+Todos os endpoints (exceto login) exigem autenticação JWT.
 
 ## Endpoints e Fluxo
 
@@ -45,50 +74,45 @@ Workshops
 
 # Frontend
 
+## Requisitos
+- Node.js (recomendado: >= 16.x ou 18.x LTS)
+- npm (vem com Node)
+- Angular CLI 15.x (opcional instalar globalmente)
 
+<<<<<<< Updated upstream
 ## O que foi implementado:
+=======
+Verifique versão Node:
+```bash
+node -v
+```
+>>>>>>> Stashed changes
 
-### 1. **Modelos de Dados** (seguindo sua especificação)
-- `Colaborador`: { id: number, nome: string }
-- `Workshop`: { id: number, nome: string, dataRealizacao: Date, descricao: string }
-- `Ata`: { id: number, workshop: Workshop, colaboradores: Colaborador[] }
+Se precisar instalar Angular CLI global (opcional, você pode usar npx):
+```bash
+npm install -g @angular/cli@15.2.6
+```
 
-### 2. **Interface de Visualização de Atas**
-- Lista todas as atas por padrão
-- Mostra data, nome, descrição e colaboradores de cada workshop
-- Filtro por nome do colaborador
-- Filtro por nome do workshop
-- Filtro por data
-- Design responsivo baseado no seu mock
+## Instalação
+Dentro da pasta do projeto (`workshop-atas-app`):
+```bash
+npm install
+```
+Isto instalará todas as dependências listadas em `package.json`.
 
-### 3. **Detalhes do Workshop**
-- Clique no nome do workshop para ver detalhes
-- Lista completa de colaboradores presentes
-- Informações detalhadas do workshop
+## Executando em Desenvolvimento
+```bash
+npm start
+```
+Depois acesse: http://localhost:4200/
 
-### 4. **Integração com API C#**
-- Serviço completo para todos os endpoints da sua API na porta 7163
-- Implementação de todos os métodos HTTP necessários
-- Dados mock para desenvolvimento
-
-## 🚀 Como executar:
-
-1. **Abra o terminal na pasta do projeto:**
-   ```bash
-   cd [CAMINHO DO PROJETO]
-   ```
-
-2. **Instale as dependências (se necessário):**
-   ```bash
-   npm install
-   ```
-
-3. **Execute a aplicação:**
-   ```bash
-   ng serve
-   ```
-
-4. **Abra no navegador:**
-   `http://localhost:4200`
+Caso a porta esteja ocupada, você pode alterar:
+```bash
+ng serve --port 4300
+```
+ou
+```bash
+npm start -- --port=4300
+```
 
 

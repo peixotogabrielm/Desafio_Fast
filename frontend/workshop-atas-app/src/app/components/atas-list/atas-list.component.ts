@@ -36,12 +36,7 @@ export class AtasListComponent implements OnInit {
     this.mockDataService.obterAtas().subscribe({
       next: (atas: Ata[]) => {
         this.todasAtas = atas;
-        console.log('✅ Atas carregadas do mock:', atas);
-        console.log('📅 Datas dos workshops:', atas.map(a => ({
-          workshop: a.workshop.nome,
-          data: a.workshop.dataRealizacao,
-          dataFormatada: new Date(a.workshop.dataRealizacao).toISOString().split('T')[0]
-        })));
+
         this.configurarFiltros();
       },
       error: (error: any) => {
@@ -63,9 +58,7 @@ export class AtasListComponent implements OnInit {
   }
 
   filtrarAtas(colaborador: string, workshop: string, data: string): Ata[] {
-    console.log('🔍 Iniciando filtro com parâmetros:', { colaborador, workshop, data });
     let atasFiltradas = [...this.todasAtas];
-    console.log('📋 Total de atas antes do filtro:', atasFiltradas.length);
 
     if (colaborador) {
       atasFiltradas = atasFiltradas.filter(ata =>
@@ -73,20 +66,15 @@ export class AtasListComponent implements OnInit {
           col.nome.toLowerCase().includes(colaborador.toLowerCase())
         )
       );
-      console.log('👥 Atas após filtro por colaborador:', atasFiltradas.length);
     }
 
     if (workshop) {
       atasFiltradas = atasFiltradas.filter(ata =>
         ata.workshop.nome.toLowerCase().includes(workshop.toLowerCase())
       );
-      console.log('🏢 Atas após filtro por workshop:', atasFiltradas.length);
     }
 
     if (data && data.trim() !== '') {
-      console.log('� Filtrando por data:', data);
-      const dataOriginal = atasFiltradas.length;
-
       atasFiltradas = atasFiltradas.filter(ata => {
         const dataWorkshop = new Date(ata.workshop.dataRealizacao);
         const ano = dataWorkshop.getFullYear();
@@ -94,20 +82,14 @@ export class AtasListComponent implements OnInit {
         const dia = String(dataWorkshop.getDate()).padStart(2, '0');
         const dataWorkshopFormatada = `${ano}-${mes}-${dia}`;
 
-        console.log(`� Comparando: Workshop "${ata.workshop.nome}" - ${dataWorkshopFormatada} === ${data}`);
 
         const corresponde = dataWorkshopFormatada === data;
-        if (corresponde) {
-          console.log(`✅ Match encontrado para: ${ata.workshop.nome}`);
-        }
+
 
         return corresponde;
       });
 
-      console.log(`� Atas após filtro por data: ${atasFiltradas.length} (era ${dataOriginal})`);
     }
-
-    console.log('🎯 Resultado final do filtro:', atasFiltradas);
     return atasFiltradas;
   }
 

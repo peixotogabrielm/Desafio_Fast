@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|c:\\projetos medx\\desafio_fast\\backend\\controleatas\\controllers\\atascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|solutionrelative:controleatas\\controllers\\atascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|c:\\projetos medx\\desafio_fast\\backend\\controleatas\\controllers\\colaboradorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|solutionrelative:controleatas\\controllers\\colaboradorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|c:\\projetos medx\\desafio_fast\\backend\\controleatas\\controllers\\workshopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|solutionrelative:controleatas\\controllers\\workshopscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|c:\\projetos medx\\desafio_fast\\backend\\controleatas\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D899CDB1-9DD1-4691-B819-5751DA13F5C3}|ControleAtas\\ControleAtas.csproj|solutionrelative:controleatas\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WorkshopsController.cs",
+              "DocumentMoniker": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\WorkshopsController.cs",
+              "RelativeDocumentMoniker": "ControleAtas\\Controllers\\WorkshopsController.cs",
+              "ToolTip": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\WorkshopsController.cs",
+              "RelativeToolTip": "ControleAtas\\Controllers\\WorkshopsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T21:50:35.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ColaboradoresController.cs",
+              "DocumentMoniker": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\ColaboradoresController.cs",
+              "RelativeDocumentMoniker": "ControleAtas\\Controllers\\ColaboradoresController.cs",
+              "ToolTip": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\ColaboradoresController.cs",
+              "RelativeToolTip": "ControleAtas\\Controllers\\ColaboradoresController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T21:50:35.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ControleAtas\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ControleAtas\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T21:50:34.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AtasController.cs",
+              "DocumentMoniker": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\AtasController.cs",
+              "RelativeDocumentMoniker": "ControleAtas\\Controllers\\AtasController.cs",
+              "ToolTip": "C:\\Projetos MEDX\\Desafio_Fast\\backend\\ControleAtas\\Controllers\\AtasController.cs",
+              "RelativeToolTip": "ControleAtas\\Controllers\\AtasController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T21:50:34.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
